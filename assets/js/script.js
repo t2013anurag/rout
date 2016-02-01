@@ -1,28 +1,27 @@
 var app = angular.module("plunker", [])
-  .config(function ($routeProvider, $locationProvider, $httpProvider) {
+  .config(function ($routeProvider, $locationProvider) {
 
-    $routeProvider.when('/home',
-    {
-      templateUrl:    'index/index',
-      controller:     'HomeCtrl'
+     $routeProvider
+            .when('/', {
+                templateUrl : 'index',
+                controller : mainController
+            })
+            .when('/home', {
+                templateUrl : 'partials/home',
+                controller : mainController
+            })
+            .when('/about', {
+                templateUrl : 'partials/about',
+                controller : mainController
+            })
+            .when('/contact', {
+                templateUrl : 'partials/contact',
+                controller : mainController
+            });
+    
+        // use the HTML5 History API
+        $locationProvider.html5Mode(true);
     });
-    $routeProvider.when('/about',
-    {
-      templateUrl:    'about/abput',
-      controller:     'AboutCtrl'
-    });
-    $routeProvider.when('/contact',
-    {
-      templateUrl:    'contact/contact',
-      controller:     'ContactCtrl'
-    });
-    $routeProvider.otherwise(
-    {
-      redirectTo:     '/home',
-      controller:     'HomeCtrl', 
-    }
-  );
-});
 
 
 app.controller('NavCtrl', 

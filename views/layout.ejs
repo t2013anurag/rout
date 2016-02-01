@@ -7,23 +7,59 @@
   document.write('<base href="' + document.location + '" />');
 </script>
 <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
-<link rel="stylesheet"  href="style.css" />
-
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" href="/styles/animate.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 
   <body>
-    <%- body %>
 
-
-
+<section id="first">
+<nav id="nav"class="navbar newnav">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
    
-  <div ng-view> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+            <a  href="/home">HOME</a>
+        </li>
+        <li>
+            <a  href="/about">ABOUT</a>
+        </li>
+        <li>
+            <a  href="/contact">CONTACT</a>
+        </li>
+        <li>
+          <a class="login" style="color:#f2f2f2;" href="/login">Login</a>
+        </li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   <%-body%>
+ 
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/angular-animate.min.js"></script>
+    <script src="/js/dependencies/angular.js"></script>
+    <script src="/js/dependencies/angular.min.js"></script>
+    <script src="/js/dependencies/angularuirouter.min.js"></script>
+    <script src="/js/dependencies/app.js"></script>
+    <script src="/js/dependencies/bootstrap.min.js"></script>
+    <script src="/js/dependencies/city-state.js"></script>
+    <script src="/js/dependencies/foundation.min.js"></script>
+    <script src="/js/dependencies/jquery.js"></script>
+    <script src="/js/dependencies/smooth-scroll.js"></script>
+    <script src="/js/dependencies/tag-it.js"></script>
     <script src="/js/script.js"></script>
     <!--SCRIPTS END-->
   </body>
